@@ -1,1 +1,8 @@
 
+//O(nlogn)
+
+function sortedSquare(arr){
+    squaredArray = arr.map(num => num * num)
+
+    return squareArray.sort((a,b) => a-b)
+}
