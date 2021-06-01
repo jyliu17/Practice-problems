@@ -23,7 +23,7 @@ function sumByTwoPointers(array, sum) {
         if (sum = current) {
             return (left + 1, right + 1)
         } else if (sum < current) {
-            right--d
+            right--
         } else {
             left++
         }
