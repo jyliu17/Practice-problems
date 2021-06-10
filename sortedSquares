@@ -8,30 +8,24 @@ function sortedSquare(arr){
 }
 
 //O(n)
-function sortedSquaredArray(arr) {
-    let right = 0;
-    while (right < arr.length && arr[right] < 0) {
-        right++
-    }
-    let left = right - 1;
-    let output = [];
-
-    while (left >= 0 && right < arr.length) {
-        if (arr[left]*arr[left] < arr[right]*arr[right]) {
-            output.push(arr[left]*arr[left]);
-            left--;
-        } else {
-            output.push(arr[right]*arr[right]);
-            right++;
+function sortedSquares(nums) {
+   
+    let left = 0;
+    let right = nums.length-1;
+    let arr = new Array(right+1)
+    for(let i=nums.length-1; i>=0; i--){
+        let l = nums[left] ** 2;
+        let r = nums[right] **2;
+        if(l>=r){
+            arr[i] = l
+            left++;
+        }else{
+            arr[i] = r
+            right--
         }
     }
-    while (left >= 0) {
-        output.push(arr[left]*arr[left]);
-        left--;
-    }
-    while (right < arr.length) {
-        output.push(arr[right]*arr[right]);
-        right++
-    }
+    return arr
+
+};
     return output;
 }
