@@ -26,6 +26,7 @@ function threeSum(nums)
     }
     return result;    
 
+//algo expert solution
 
 function threeNumberSum(array, targetSum) {
   // Write your code here.
@@ -44,10 +45,10 @@ function threeNumberSum(array, targetSum) {
                 left++;
                 right--;
             } else if(currentSum < targetSum) {
-							left++;
-						} else if(currentSum > targetSum) {
-							right--;
-						}
+		left++;
+	    } else if(currentSum > targetSum) {
+		right--;
+	    }
         }
     }
     return result;    
