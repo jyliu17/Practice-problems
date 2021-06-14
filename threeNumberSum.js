@@ -35,7 +35,7 @@ function threeNumberSum(array, targetSum) {
 	const result = [];
 	for (let i = 0; i < array.length - 2; i++) {
         let left = i + 1;
-				let right = array.length - 1;
+	let right = array.length - 1;
         
         while(left < right) {
             const currentSum = array[i] + array[left] + array[right];
