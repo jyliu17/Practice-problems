@@ -37,3 +37,9 @@ var slowestKey = function(releaseTimes, keysPressed) {
     
     return letter;
 };
+
+
+/**
+Time Complexity - O(N) where N is the length of the array.
+Space Complexity - O(1) we do not allocate any additional data.
+**/
