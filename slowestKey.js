@@ -21,3 +21,19 @@
 //Keypress for 'd' had a duration of 50 - 49 = 1 (pressed at time 49 right after the release of the previous character and released at time 50).
 //The longest of these was the keypress for 'b' and the second keypress for 'c', both with duration 20.
 //'c' is lexicographically larger than 'b', so the answer is 'c'.
+
+
+var slowestKey = function(releaseTimes, keysPressed) {
+    let maxTime = releaseTimes[0];
+    let letter = keysPressed[0]
+    
+    for(let i = 1; i < releaseTimes.length; i++) {
+        let currentTime = releaseTimes[i] - releaseTimes[i - 1]
+        if (currentTime > maxTime || (currentTime === maxTime && keysPressed[i] > letter)) {
+            maxTime = currentTime;
+            letter = keysPressed[i]
+        }
+    }
+    
+    return letter;
+};
