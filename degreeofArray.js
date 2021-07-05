@@ -17,3 +17,33 @@ Of the subarrays that have the same degree:
 The shortest length is 2. So return 2.
 
 **/
+
+var findShortestSubArray = function(nums) {
+    if(nums.length === 1) return 1
+    let memo = {}
+    for(let i = 0; i < nums.length; i++) {
+        let number = nums[i]
+        number in memo ? memo[number].push(i) : memo[number] = [i]
+    }
+    let smallestSubArrayDiff = Infinity
+    let highestFrequency = 0 
+    for(let number in memo) {
+        let indexArr = memo[number]
+        if(indexArr.length > 1) {
+            let smallestIdx = Math.min(...indexArr)
+            let largestIdx = Math.max(...indexArr)
+            let currentDifference = largestIdx - smallestIdx
+            if(indexArr.length > highestFrequency) {
+                highestFrequency = indexArr.length
+                smallestSubArrayDiff = currentDifference
+            } else if (indexArr.length === highestFrequency) {
+                smallestSubArrayDiff = Math.min(smallestSubArrayDiff, currentDifference)
+            }
+            }
+    }
+    if(smallestSubArrayDiff === Infinity) {
+        return 1
+    } else {
+        return smallestSubArrayDiff +=1
+    }
+};
