@@ -37,6 +37,7 @@ Output: 4
 Explanation: Factors list is [1, 2, 4, 5, 8, 10, 20, 25, 40, 50, 100, 125, 200, 250, 500, 1000].
 
 */
+//O(n)
 
 var kthFactor = function(n,k) {
   
