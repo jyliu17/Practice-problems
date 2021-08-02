@@ -24,7 +24,10 @@ Input: x = -101
 Output: false
 **/
 
-/** two pointers **/
+/** two pointers
+time O(len n)
+space O(1)
+**/
 
 var isPalindrome = function(x) {
     
@@ -51,3 +54,15 @@ var isPalindrome = function(x) {
     
     return true;
 };
+
+/** string reversal
+time O(len n)
+space O(1)
+**/
+
+var isPalindrome = function(x) {
+    
+return x == x.toString().split('').reverse().join('')
+    
+};
+
