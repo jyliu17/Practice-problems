@@ -32,4 +32,26 @@ Example 1:
 Input: root = [4,2,7,1,3], val = 2
 Output: [2,1,3]
 
+
 **/
+
+var searchBST = function(root, val) {
+    if (!root){
+        return null;
+    }
+    let currentNode = root
+    while(currentNode) {
+      if(val < currentNode.val) {
+        //Left
+        currentNode = currentNode.left;
+      } else if(val > currentNode.val) {
+        //Right
+        currentNode = currentNode.right;
+      } else if(currentNode.val === val) {
+        return currentNode;
+      }
+    }
+
+    return null;
+    
+};
