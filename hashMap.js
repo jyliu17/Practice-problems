@@ -1,12 +1,27 @@
 
+
+/** Declaration **/ 
 class Engineer {
-    constructor(name, favLanguage, number  ) {
+    constructor(name, favLanguage, number) {
       this.name = name,
       this.favLanguage = favLanguage,
       this.number = number;
         
     }
 }
+
+/** Expression **/ 
+
+let Engineer = class {
+    constructor(name, favLanguage, number) {
+      this.name = name,
+      this.favLanguage = favLanguage,
+      this.number = number;
+        
+    }
+};
+console.log(Engineer.name);
+// output: "Engineer"
 
 const engineers = new Map();
 
