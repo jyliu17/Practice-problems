@@ -25,3 +25,23 @@ Input: s = ""
 Output: 0
 
 **/
+
+var lengthOfLongestSubstring = function(s) {
+    if (s.length === 0)
+        return 0;
+    let prevStr = "";
+    let sum = 0, highest = 0;
+    for(const c of s) {
+        if (prevStr.includes(c)) {
+            let index = prevStr.indexOf(c);
+            prevStr = prevStr.substring(index+1);
+        }
+        
+        prevStr += c;
+        sum = prevStr.length;
+        
+        if (sum > highest)
+            highest = sum
+    }
+    return highest;
+};
