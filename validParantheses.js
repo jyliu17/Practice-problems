@@ -45,6 +45,11 @@ var isValid = function(s) {
       return false;
     }
   }
-  return stack.length ? 0 : 1;
+ 
+ return stack.length === 0
+ 
+ /** return stack.length ? 0 : 1 **/
+ 
+ 
 };
 
