@@ -20,3 +20,34 @@ Output: true
 Explanation: Notice that the path visits the origin twice.
 
 ***/
+
+
+var isPathCrossing = function(path) {
+  const set = new Set();
+  
+  // Initial coordinates
+  let x = 0;
+  let y = 0;
+  
+  // Adding initial coordinates to the set. The comma works as a separator over here
+  set.add(`${x},${y}`);
+  
+  // Loop over the entire path
+  for (let i = 0; i < path.length; i += 1) { 
+  
+    // Mutate coordinates based on the direction
+    if (path[i] === "N") y += 1;
+    else if (path[i] === "E") x += 1;
+    else if (path[i] === "S") y -= 1;
+    else x -= 1;
+    
+	// Early return if coordinate already exists
+    if (set.has(`${x},${y}`)) return true;
+	
+	// Add newly visited coordinate to the set
+    set.add(`${x},${y}`);
+  }
+  
+  // Path did not cross itself at any point
+  return false;
+};
