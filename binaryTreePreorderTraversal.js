@@ -38,6 +38,7 @@ Result.push node.value
 Node = node.left
 
 **/ 
+
 var preorderTraversal = function(root) {
     const result = [];
   
@@ -55,4 +56,35 @@ var preorderTraversal = function(root) {
     }
     
     return result;
+};
+
+/**
+Recursive
+The approach for a recursive solution:
+
+Result = []
+Node = root
+Base case: node === null
+Push node.val to result
+For each child [left, right], recurse on that child
+**/
+
+var preorderTraversal = function(root) {
+    const result = [];
+    
+    const traverse = (node) => {
+      if (node === null) {
+        return;
+      }
+      
+      result.push(node.val);
+      
+      [node.left, node.right].forEach(child => {
+        traverse(child)
+      });
+    };
+  
+    traverse(root);
+	
+	return result;
 };
