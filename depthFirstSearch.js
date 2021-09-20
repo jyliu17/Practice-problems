@@ -1,5 +1,5 @@
 
-/*** Depth-first Search. (DFS) 
+/*** Depth-first Search. (DFS - Algo Expert) 
 
 You are given a Node class that has a name and an array of optional children nodes. When put together, nodes form an acyclic tree like structure. 
 
