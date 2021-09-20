@@ -9,4 +9,17 @@ Implement the depthFirstSearch method on the Node class, which takes in an empty
 
 If you're unfamiliar with Depth-first Search, we recommend watching the Conceptual Overview section this question's video explanation before starting to code.
 
+
+Sample Input
+
+
+         A
+      /  |  \
+     B   C   D 
+    / \     / \
+   E   F   G  H
+      / \   \
+     I   J   K
+
+
 **/
