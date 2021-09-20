@@ -7,4 +7,6 @@ Implement the depthFirstSearch method on the Node class, which takes in an empty
 
 (specifically navigating the tree from left to right), stores all of the nodes names in the put array, and returns it.
 
+If you're unfamiliar with Depth-first Search, we recommend watching the Conceptual Overview section this question's video explanation before starting to code.
+
 **/
