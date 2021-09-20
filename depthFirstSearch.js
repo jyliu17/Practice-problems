@@ -21,5 +21,8 @@ Sample Input
       / \   \
      I   J   K
 
+Sample Output:
+
+[ A, B, E, F, I, J, C, D, G, K, H]
 
 **/
