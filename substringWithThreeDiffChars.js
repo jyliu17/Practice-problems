@@ -35,6 +35,7 @@ s​​​​​​ consists of lowercase English letters.
 
 var countGoodSubstrings = function(s) {
     const len = s.length
+
     if (len < 3)    return 0
     
     
@@ -52,5 +53,35 @@ var countGoodSubstrings = function(s) {
 };
 
 
+/** Sliding window solution **/
 
+var countGoodSubstrings = function(s) {
+    let counter = 0;
+    let duplicateCount = 0;
+    const charToCount = {};
+    let start = 0;
+    let size = 0;
+    
+    for (let i = 0; i < s.length; i++) {
+        charToCount[s[i]] = (charToCount[s[i]] || 0) + 1;
+        size++;
+        if (charToCount[s[i]] === 2) {
+            duplicateCount++;
+        }
+        
+        while (size > 3 || duplicateCount > 0) {
+            if (--charToCount[s[start]] === 1) {
+                duplicateCount--;
+            }
+            start++;
+            size--;
+        }
+        
+        if (size === 3) {
+            counter++;
+        }
+    }
+    
+    return counter;
+};
 
