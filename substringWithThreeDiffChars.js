@@ -33,4 +33,24 @@ s​​​​​​ consists of lowercase English letters.
 
 /** O(n) solution **/
 
+var countGoodSubstrings = function(s) {
+    const len = s.length
+    if (len < 3)    return 0
+    
+    
+    let result = 0
+    for (let i = 2; i < len; i++) {
+        const a = s[i - 2]
+        const b = s[i - 1]
+        const c = s[i]
+        if (a !== b && b !== c && c !== a)
+            result++
+    }
+    
+    
+    return result
+};
+
+
+
 
