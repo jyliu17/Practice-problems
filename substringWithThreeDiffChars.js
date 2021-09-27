@@ -30,3 +30,7 @@ Constraints:
 s​​​​​​ consists of lowercase English letters.
 
 **/
+
+/** O(n) solution **/
+
+
