@@ -15,6 +15,9 @@ function sumByBruteForce(array, sum) {
 
 }
 
+
+/** Two Pointer **/
+
 function sumByTwoPointers(array, sum) {
     left = 0
     right = array.length - 1
