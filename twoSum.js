@@ -30,7 +30,26 @@ function sumByTwoPointers(array, sum) {
         } else {
             left++
         }
-       
     } 
-
 }
+
+/** Hashmap/Map **/
+
+var twoSum = function(nums, target) {
+    
+  const sum = new Map()
+  
+  for (let i = 0; i < nums.length; i++){
+      
+      let diff = target - nums[i]
+
+      
+      if(!sum.has(diff) ){
+          sum.set(nums[i], i)
+      } else {
+          let index = sum.get(diff)
+          return [index, i]
+      }
+  }
+    
+};
